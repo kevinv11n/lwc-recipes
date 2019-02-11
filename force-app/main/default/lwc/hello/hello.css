@@ -1,0 +1,9 @@
+.sldstoken {
+    background: red;
+    font-size: var(--lwc-fontSizeLarge);
+}
+
+.customtoken {
+    background: blue;
+    font-family: var(--comic);
+}
