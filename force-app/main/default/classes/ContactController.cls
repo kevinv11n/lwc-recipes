@@ -19,4 +19,11 @@ public with sharing class ContactController {
         return [SELECT Id, Name, Title, Phone, Email, Picture__c FROM Contact LIMIT 1];
     }
 
+    @AuraEnabled
+    public static Contact throwForMe(String message) {
+        throw new AuraException('Custom message: ' + message);
+    }
+
+
+
 }
