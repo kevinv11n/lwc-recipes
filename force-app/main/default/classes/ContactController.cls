@@ -28,4 +28,9 @@ public with sharing class ContactController {
             LIMIT 1
         ];
     }
+
+    @AuraEnabled
+    public static Contact throwForMe(String message) {
+        throw new AuraException('Custom message: ' + message);
+    }
 }
