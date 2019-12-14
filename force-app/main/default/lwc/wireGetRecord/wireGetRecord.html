@@ -1,0 +1,36 @@
+<template>
+    <lightning-card title="WireGetRecord" icon-name="custom:custom67">
+        <div class="slds-m-horizontal_medium">
+            <lightning-input
+                data-id="recordId"
+                value=""
+                label="Record Id"
+            ></lightning-input><br>
+            <lightning-input
+                data-id="fields"
+                data-type="array"
+                value=""
+                label="Fields (CSV)"
+            ></lightning-input><br>
+            <lightning-input
+                data-id="optionalFields"
+                data-type="array"
+                value=""
+                label="Optional Fields (CSV)"
+            ></lightning-input>
+            <p class="slds-p-vertical_small">
+                <lightning-button
+                    label="Request"
+                    onclick={handleRequestClick}
+                ></lightning-button>
+                <lightning-button
+                    label="Clear"
+                    onclick={handleClearClick}
+                ></lightning-button>
+            </p>
+            <div class="scroller">
+                <pre>{receivedStr}</pre>
+            </div>
+        </div>
+    </lightning-card>
+</template>

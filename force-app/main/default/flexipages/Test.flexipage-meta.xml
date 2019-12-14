@@ -6,7 +6,7 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
-            <componentName>hello</componentName>
+            <componentName>wireGetRecord</componentName>
         </componentInstances>
         <name>region2</name>
         <type>Region</type>
