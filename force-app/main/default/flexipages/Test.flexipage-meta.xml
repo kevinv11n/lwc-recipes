@@ -6,6 +6,9 @@
     </flexiPageRegions>
     <flexiPageRegions>
         <componentInstances>
+            <componentName>helloAura</componentName>
+        </componentInstances>
+        <componentInstances>
             <componentName>hello</componentName>
         </componentInstances>
         <name>region2</name>

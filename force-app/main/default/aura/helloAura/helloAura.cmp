@@ -1,0 +1,44 @@
+<aura:component
+    implements="flexipage:availableForAllPageTypes"
+    controller="ContactController"
+>
+    <aura:attribute name="lastError" type="Contact" />
+
+    <lightning:card
+        title="helloAura (Apex Errors in Aura)"
+        iconName="custom:custom30"
+    >
+        <aura:set attribute="actions">
+            <span class="aura">Aura Component</span>
+        </aura:set>
+
+        <div class="slds-m-around_medium">
+            <p class="slds-m-bottom_small">
+                <lightning:input
+                    value=""
+                    placeholder="Enter payload"
+                    label="Payload"
+                ></lightning:input>
+                <lightning:button
+                    label="throwAuraException"
+                    onclick="{!c.handleLoad}"
+                ></lightning:button>
+                <lightning:button
+                    label="throwAuraHandledException"
+                    onclick="{!c.handleLoad}"
+                ></lightning:button>
+                <lightning:button
+                    label="throwBuiltInException"
+                    onclick="{!c.handleLoad}"
+                ></lightning:button>
+                <lightning:button
+                    label="throwMyException"
+                    onclick="{!c.handleLoad}"
+                ></lightning:button>
+            </p>
+            <div class="scroller">
+                <pre>{!v.lastError}</pre>
+            </div>
+        </div>
+    </lightning:card>
+</aura:component>

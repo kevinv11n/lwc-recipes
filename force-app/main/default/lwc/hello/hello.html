@@ -1,11 +1,39 @@
 <template>
-    <lightning-card title="Hello" icon-name="custom:custom14">
+    <lightning-card
+        title="hello (Apex Errors in LWC)"
+        icon-name="custom:custom63"
+    >
         <div class="slds-m-around_medium">
-            Hello, {greeting}!
+            <p class="slds-m-bottom_small">
+                <lightning-input
+                    value=""
+                    placeholder="Enter payload"
+                    label="Payload"
+                ></lightning-input>
+                <lightning-button
+                    label="throwAuraException"
+                    onclick={handleLoad}
+                ></lightning-button>
+                <lightning-button
+                    label="throwAuraHandledException"
+                    onclick={handleLoad}
+                ></lightning-button>
+                <lightning-button
+                    label="throwBuiltInException"
+                    onclick={handleLoad}
+                ></lightning-button>
+                <lightning-button
+                    label="throwMyException"
+                    onclick={handleLoad}
+                ></lightning-button>
+            </p>
+            <div class="scroller">
+                <pre>{lastError}</pre>
+            </div>
         </div>
 
         <c-view-source source="lwc/hello" slot="footer">
-            Bind an HTML element to a component property.
+            Handle errors thrown from Apex.
         </c-view-source>
     </lightning-card>
 </template>

@@ -36,4 +36,27 @@ public with sharing class ContactController {
     public static Contact throwForMe(String message) {
         throw new AuraException('Custom message: ' + message);
     }
+
+    public class MyException extends Exception {
+    }
+
+    @AuraEnabled
+    public static Contact throwAuraException(String message) {
+        throw new AuraException('Custom message: ' + message);
+    }
+
+    @AuraEnabled
+    public static Contact throwAuraHandledException(String message) {
+        throw new AuraHandledException('Custom message: ' + message);
+    }
+
+    @AuraEnabled
+    public static Contact throwBuiltInException(String message) {
+        throw new DmlException('Custom message: ' + message);
+    }
+
+    @AuraEnabled
+    public static Contact throwMyException(String message) {
+        throw new MyException('Custom message: ' + message);
+    }
 }
